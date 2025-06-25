@@ -12,12 +12,20 @@ import de.mymovie.flughafen.Flieger;
  *     Referenzen:
  *     Flugzeug flugzeugReferenz = new Flugzeug(); --- starten, fliegen, landen, gewartetWerden, toString, getClass, hashCode, equals
  *     Machine maschineReferenz = new Flugzeug(); --- gewartetWerden , toString, getClass, hashCode, equals
- *     Object objectReferenz = new Flugzeug() ; --- , toString, getClass, hashCode, equals
+ *     Object objectReferenz = new Flugzeug() ; --- , toString, getClass, hashCode, equals, toString, getClass, hashCode, equals
+ *     Flieger fliegerReferenz = new Flugzeug(); --- starten, fliegen, landen,
  *
  *     Casting
  *     Flugzeug cast1 = (Flugzeug) maschineReferenz;
- *     Flugzeug cast2 = (Flugzeug) maschineReferenz;
- *     Maschine cast2 = (Maschine) maschineReferenz;
+ *     Flugzeug cast2 = (Flugzeug) objectReferenz;
+ *     Maschine cast3 = (Maschine) objectReferenz;
+ *
+ *     Flugzeug cast4 = (Flugzeug) fliegerReferenz
+ *     Maschine cast5 =(Maschine) fliegerReferenz;
+ *     Flieger cast6 = (Flieger) maschineReferenz;
+ *     Flieger cast7 = (Flieger) objectReferenz;
+ *
+ *     AUSPROBIEREN!
  *
  * </pre>
  */
