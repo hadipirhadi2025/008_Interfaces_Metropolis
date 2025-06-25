@@ -1,8 +1,10 @@
 package de.mymovie.film;
 
+import de.mymovie.flughafen.Flieger;
 import de.mymovie.flughafen.Tower;
 import de.mymovie.lebewesen.Spatz;
 import de.mymovie.lebewesen.Superman;
+import de.mymovie.maschinen.Batwing;
 import de.mymovie.maschinen.Flugzeug;
 
 /**
@@ -26,6 +28,7 @@ public class MetropolisAirport {
         Spatz jack = new Spatz();
         Flugzeug beluga = new Flugzeug();
         Superman S = new Superman();
+        Batwing batmansFlieger = new Batwing();
 
         System.out.println("Jack " + jack.getClass().getSimpleName()+" kommt vorbei und möchte landen");
         beobachter.erteilenLandeerlaubnis(jack);
@@ -39,5 +42,15 @@ public class MetropolisAirport {
                 "möchte landen");
         beobachter.erteilenLandeerlaubnis(S);
         System.out.println();
+
+        System.out.println("Betman kommt im seinem " + batmansFlieger.getClass().getSimpleName() + "vorbei und möchte die Welt retten");
+        beobachter.erteilenLandeerlaubnis(batmansFlieger);
+        System.out.println();
+
+        System.out.println("ACHTUNG! ACHTING! DARAMATIK ENTWICKLUNG IN METROPOLIS: ALLES WAS FLIEGEN KANN MUSS PAUS AUS METROPOLIS");
+        Flieger[] allesWasFliegt = {jack, beluga, S, batmansFlieger};
+        for(Flieger flieger: allesWasFliegt){
+
+        }
     }
 }
