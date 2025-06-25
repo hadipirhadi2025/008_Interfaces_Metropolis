@@ -3,18 +3,19 @@ package de.mymovie.lebewesen;
 /**
  * <pre>
  *     Template für Vogel-Objekte
- *     Referenztyp für Vogel-Objekte und Objekte, dren Typ von Vogel erbt.
+ *     Referenztyp für Vogel-Objekte und Objekte, deren Typ von Vogel erbt.
  *
  *     Referenzen für Vogel-Objekte
- *     Vogel vogelRefenze = new Vogel(); --- federKleidPutzen, getClass, equals, toDtring, hashcode
- *     Objekt objektRefenz = new Vogel(); --- getClass, equals, toDtring, hashcode1
+ *     Vogel vogelReferenz = new Vogel();  --- federkleidPutzen, getClass, equals, toString, hashCode
+ *     Object objectReferenz = new Vogel(); --- getClass, equals, toString, hashCode
  *
  *     Casting
- *     Vogel objektZuVogel = (Vogel) objectReferenz;
+ *     Vogel objectZuVogel = (Vogel) objectReferenz;
  *
  * </pre>
  */
 public class Vogel {
+
     /**
      * Jeder Vogel hat Federn und kann sie in Ordnung bringen
      */

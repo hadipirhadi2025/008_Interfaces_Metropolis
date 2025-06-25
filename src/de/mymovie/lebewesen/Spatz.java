@@ -1,37 +1,39 @@
 package de.mymovie.lebewesen;
 
+import de.mymovie.flughafen.Flieger;
+
 /**
  * <pre>
- *    Template für Spatzobjekte.
- *    Referenztyp für Spatz-Objekte und Objekte von erben Typen
+ *     Template für Spatzobjekte.
+ *     Referenztyp für Spatz-Objekte und Objekte von erbenden Typen
  *
- *    Wunsch: Ein Spatz kann auch mit einer Referenz vom Typ Flieger angesprochen werden
+ *     Wunsch: Ein Spatz kann auch mit einer Referenz vom Tyo Flieger angesprochen werden
+ *     Ein Spatz ist ein Vogel : extends Vogel
+ *     Ein Spatz ist ein Flieger : implements Flieger (Flieger ist Interface)
  *
- *    Ein Spatz ist ein Vogel : extends Vogel
- *    Ein Spatz ist ein Flieger : Implements Flieger (Flieer ist Interface)
  * </pre>
  */
-public class Spatz extends Vogel{
+public class Spatz extends Vogel implements Flieger {
     /**
-     * Überzetzung: Ich mache auf, Kirschen zu suchen
+     * Übersetzung: Ich mache auf, Kirschen zu suchen
      */
-
     public void starten(){
         federkleidPutzen();
         System.out.println("Piep");
     }
+
     /**
-     * Uberzetzung: Ich suche und suche und suche nach Kirschen
+     * Übersetzung: Ich suche und suche und suche nach Kirschen
      */
-    public void flieger(){
-        System.out.println("Piepe");
+    public void fliegen(){
+        System.out.println("Piep");
     }
 
     /**
-     * Übersetzung: Das sieht lecker aus, ich lande
+     * Übersetztung: Das sieht lecker aus, ich lande
      */
     public void landen(){
-        System.out.println("Piepe");
+        System.out.println("Piep");
         federkleidPutzen();
     }
 }

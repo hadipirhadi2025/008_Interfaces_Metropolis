@@ -8,27 +8,27 @@ import de.mymovie.flughafen.Flieger;
  *
  *     Ein Batwing ist eine Maschine, ein Batwing ist ein Flieger
  *
- *     Wenn der Batwing landet, ist Batman da und die Welt ist gerettet
+ *     Wenn der Batwing landet, ist Batman da und die Welt ist gerettet.
  *     Batman sagt: Welt retten ist Aufgabe von Menschen, Superman als Außerordischer
- *     soll sich da eher raus halten. Bei jeder Landung sagt er: die bisher durch Superman erfolgten Weltrettungen
+ *     soll sich da eher raus halten. Bei jeder Landung sagt er: die bisher durch Superman
  *     erfolgten Weltrettungen spielen keine Rolle.
  *
- *     implements Flieger: Versprechen, dass Objekte das Typs Batwing die starten
- *     fliegen und landen Methode durchführen können
+ *     implements Flieger: Versprechen, dass Objekte des Typs Batwing die starten,
+ *     fliegen und landen Methode durchführen können.
  *
  *     Flieger fliegerReferenz = new Batwing():
  *     fliegerReferenz.flieger();
  * </pre>
+ *
  */
 public class Batwing extends Maschine implements Flieger {
-
     /**
-     * Implementer die Methode aus dem Interface: Überschreiben
+     * Implementiert die Methode aus dem Interface: Überschreiben
      */
     @Override
     public void starten() {
         gewartetWerden();
-        System.out.println("Auf geh's, Die Welt der Menschen muss gerettet werden.");
+        System.out.println("Auf geht's, Die Welt der Menschen muss gerettet werden.");
     }
 
     /**
@@ -36,16 +36,14 @@ public class Batwing extends Maschine implements Flieger {
      */
     @Override
     public void fliegen() {
-        System.out.println("ZIIIIIIIIIIIIIISCHHHHHHHHHHHHHHHHH");
-
+        System.out.println("ZIIIIIIIIIIIIIIISCHHHHHHHHHHHHHHHHHHHHH");
     }
 
     @Override
     public void landen() {
-        int anzahlVonSupermansWeltrettnungen = 9; //Nur EIN Platzhalter : Übung
-        System.out.println("Supermans " +anzahlVonSupermansWeltrettnungen + " soielen keine Rolle mehr! Batman ist"
-        + " da, um die Welt zu retten");
+        int anzahlVonSupermansWeltrettungen = 9; //NUR EIN Platzhalter: Übung
+        System.out.println("Supermans " + anzahlVonSupermansWeltrettungen + " spielen keine Rolle mehr! Batman ist " +
+                "da, um die Welt zu retten");
         gewartetWerden();
-
     }
 }

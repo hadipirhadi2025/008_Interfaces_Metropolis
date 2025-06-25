@@ -4,25 +4,25 @@ import de.mymovie.flughafen.Flieger;
 
 /**
  * <pre>
- *     Template/DatenTyp(Referenztyp)
+ *     Template/Datentyp(Referenztyp)
  *
- *     Einflugzeug ist eine Machine: extends
- *     Ein Flugzeug ist ein Flieger : Implements
+ *     Ein Flugzeug ist eine Maschine: extends
+ *     Ein Flugzeug ist ein Flieger: implements
  *
  *     Referenzen:
- *     Flugzeug flugzeugReferenz = new Flugzeug(); --- starten, fliegen, landen, gewartetWerden, toString, getClass, hashCode, equals
- *     Machine maschineReferenz = new Flugzeug(); --- gewartetWerden , toString, getClass, hashCode, equals
- *     Object objectReferenz = new Flugzeug() ; --- , toString, getClass, hashCode, equals, toString, getClass, hashCode, equals
- *     Flieger fliegerReferenz = new Flugzeug(); --- starten, fliegen, landen,
+ *     Flugzeug flugzeugReferenz = new Flugzeug();  --- starten, fliegen, landen, gewartetWerden, toString, getClass, hashCode, equals
+ *     Maschine maschineReferenz = new Flugzeug(); --- gewartetWerden,  toString, getClass, hashCode, equals
+ *     Object objectReferenz = new Flugzeug();   ---  toString, getClass, hashCode, equals
+ *     Flieger fliegerReferenz = new Flugzeug(); --- starten, fliegen, landen, toString, getClass, hashCode, equals
  *
- *     Casting
- *     Flugzeug cast1 = (Flugzeug) maschineReferenz;
+ *     Casting:
+ *     Flugzeug cast1 = (Flugzeug) maschinenReferenz;
  *     Flugzeug cast2 = (Flugzeug) objectReferenz;
  *     Maschine cast3 = (Maschine) objectReferenz;
  *
- *     Flugzeug cast4 = (Flugzeug) fliegerReferenz
- *     Maschine cast5 =(Maschine) fliegerReferenz;
- *     Flieger cast6 = (Flieger) maschineReferenz;
+ *     Flugzeug cast4 = (Flugzeug) fliegerReferenz;
+ *     Maschine cast5 = (Maschine) fliegerReferenz;
+ *     Flieger cast6 = (Flieger) maschinenReferenz;
  *     Flieger cast7 = (Flieger) objectReferenz;
  *
  *     AUSPROBIEREN!
@@ -30,20 +30,18 @@ import de.mymovie.flughafen.Flieger;
  * </pre>
  */
 public class Flugzeug extends Maschine implements Flieger {
-
     /** jedes Flugzeug muss vor dem Start gewartet werden */
     public void starten(){
         gewartetWerden();
-        System.out.println("Ohne zu, jetzt wird es laut");
+        System.out.println("Ohren zu, jetzt wird es laut");
     }
-
+    /** ist die Entfernung groß genug, hört man das Flugzeug nicht mehr */
     public void fliegen(){
-        System.out.println("~~~ über den Wolken ~~~");
-
+        System.out.println("~~~ über den Wolken... ~~~");
     }
-
+    /** */
     public void landen(){
-        System.out.println("Von weit weit her komme ich...");
+        System.out.println("Von weit weit her komme ich....");
         gewartetWerden();
     }
 }

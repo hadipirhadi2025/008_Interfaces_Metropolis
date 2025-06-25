@@ -9,19 +9,20 @@ import de.mymovie.maschinen.Flugzeug;
 
 /**
  * <pre>
- *     Bwschreibt den Ablauf des Films >Metropolis Airport<
- *     Copyright Alfa Movies
+ *     Beschreibt den Ablauf des Films >Metropolis Airport<
+ *     copyright Alfa Movies
  * </pre>
  * @author Susanne
  */
 public class MetropolisAirport {
+
     /**
-     * Ablauf des Films
+     * Ablauf des Films.
      * @param args wird hier nicht verwendet
      */
     public static void main(String[] args) {
-        System.out.println("");
-        System.out.println("");
+        System.out.println("Willkommen auf dem Flughafen von Metropolis!");
+        System.out.println("Hier ist einiges los, lehn dich zurück und genieße die Show.\n");
 
         Tower beobachter = new Tower();
 
@@ -30,27 +31,34 @@ public class MetropolisAirport {
         Superman S = new Superman();
         Batwing batmansFlieger = new Batwing();
 
-        System.out.println("Jack " + jack.getClass().getSimpleName()+" kommt vorbei und möchte landen");
+        System.out.println("Jack " + jack.getClass().getSimpleName() + " kommt vorbei und möchte landen.");
         beobachter.erteilenLandeerlaubnis(jack);
         System.out.println();
 
-        System.out.println("Beluga " + beluga.getClass().getSimpleName() + "Konnt vorbei und möchte landen");
+        System.out.println("Beluga " + beluga.getClass().getSimpleName() + " kommt vorbei und möchte laden.");
         beobachter.erteilenLandeerlaubnis(beluga);
         System.out.println();
 
-        System.out.println(S.getClass().getSimpleName() + "hat Lex bei verdächtigen Aktivitäten entdeckt und" +
-                "möchte landen");
+        System.out.println(S.getClass().getSimpleName() + " hat Lex bei verdächtigen Aktivitäten entdeckt und" +
+                " möchte landen.");
         beobachter.erteilenLandeerlaubnis(S);
         System.out.println();
 
-        System.out.println("Betman kommt im seinem " + batmansFlieger.getClass().getSimpleName() + "vorbei und möchte die Welt retten");
+        System.out.println("Batman kommt im seinem " + batmansFlieger.getClass().getSimpleName() +
+                " vorbei und möchte die Welt retten");
         beobachter.erteilenLandeerlaubnis(batmansFlieger);
         System.out.println();
 
-        System.out.println("ACHTUNG! ACHTING! DARAMATIK ENTWICKLUNG IN METROPOLIS: ALLES WAS FLIEGEN KANN MUSS PAUS AUS METROPOLIS");
-        Flieger[] allesWasFliegt = {jack, beluga, S, batmansFlieger};
-        for(Flieger flieger: allesWasFliegt){
-
+        System.out.println("ACHTUNG! ANCHTING! DRAMATISCHE ENTWICKLUNG IN METROPOLIS: " +
+                "ALLES, WAS FLIEGEN KANN MUSS RAUS AUS METROPOLIS!");
+        Flieger[]  allesWasFliegt = {jack, beluga, S, batmansFlieger};
+        for(Flieger einFlieger : allesWasFliegt){
+            System.out.println(einFlieger.getClass().getSimpleName() + " startet und verlässt Metropolis.");
+            einFlieger.starten();
+            einFlieger.fliegen();
+            System.out.println();
         }
+
+
     }
 }
